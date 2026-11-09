@@ -1,0 +1,29 @@
+{
+	"schemaVersion": 1,
+	"id": "alienmod",
+	"version": "${version}",
+	"name": "Alien Mod",
+	"description": "Turns other players into aliens (client-side). Toggle with a rebindable key.",
+	"authors": ["You"],
+	"license": "MIT",
+	"environment": "client",
+	"entrypoints": {
+		"client": ["com.example.alienmod.AlienModClient"],
+		"voicechat": ["com.example.alienmod.AlienVoicechatPlugin"]
+	},
+	"suggests": {
+		"voicechat": "*"
+	},
+	"mixins": [
+		{
+			"config": "alienmod.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.18.1",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
